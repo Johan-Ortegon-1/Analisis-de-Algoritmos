@@ -9,15 +9,17 @@ private static List<Articulo> articulosTomarPrestado = new ArrayList<Articulo>()
 	{
 		int resultado = 0;
 		articulosTomarPrestado.add(new Articulo("banana",1,1));
-		articulosTomarPrestado.add(new Articulo("banana de plata",10,10));
-		articulosTomarPrestado.add(new Articulo("banana oro",100,100));
-		articulosTomarPrestado.add(new Articulo("banana de diamante",1000,1000));
-		articulosTomarPrestado.add(new Articulo("manzana",2,2));
-		articulosTomarPrestado.add(new Articulo("manzana de plata",20,20));
-		articulosTomarPrestado.add(new Articulo("manzana oro",200,200));
+		articulosTomarPrestado.add(new Articulo("banana de plata",2,2));
+		articulosTomarPrestado.add(new Articulo("banana oro",10,10));
+		articulosTomarPrestado.add(new Articulo("banana de diamante",50,50));
+		articulosTomarPrestado.add(new Articulo("manzana",4,4));
+		articulosTomarPrestado.add(new Articulo("manzana de plata",8,8));
+		articulosTomarPrestado.add(new Articulo("manzana oro",20,20));
 		articulosTomarPrestado.add(new Articulo("manzana de diamante",2000,2000));
+		articulosTomarPrestado.add(new Articulo("pendiente A",1000,5));
+		articulosTomarPrestado.add(new Articulo("pendiente B",1000,5));
 		
-		resultado = Morral.mejorTula(articulosTomarPrestado, 1000);
+		resultado = Morral.mejorTula(articulosTomarPrestado, 10);
 		System.out.println("Resultado: " + resultado);
 		
 	}
