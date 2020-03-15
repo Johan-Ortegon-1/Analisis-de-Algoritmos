@@ -7,6 +7,7 @@ public class Main {
 private static List<Articulo> articulosTomarPrestado = new ArrayList<Articulo>();
 	public static void main(String[] args) 
 	{
+		/*Morral problem*/
 		int resultado = 0;
 		articulosTomarPrestado.add(new Articulo("banana",1,1));
 		articulosTomarPrestado.add(new Articulo("banana de plata",2,2));
@@ -21,7 +22,10 @@ private static List<Articulo> articulosTomarPrestado = new ArrayList<Articulo>()
 		
 		resultado = Morral.mejorTula(articulosTomarPrestado, 10);
 		System.out.println("Resultado: " + resultado);
-		
+		/*134 problem*/
+		int resultado134 = 0;
+		resultado134 = E134.descomposicion134(10);
+		System.out.println("Resultado 134: " + resultado134);
 	}
 
 }
