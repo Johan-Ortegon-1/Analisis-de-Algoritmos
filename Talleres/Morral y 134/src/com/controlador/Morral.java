@@ -6,26 +6,30 @@ public class Morral
 {
 	public static int mejorTula(List<Articulo> Arti, int w)
 	{
-		int cache[][] = new int [Arti.size()][w+1];
-		for(int i = 1 ; i<Arti.size() ; i++)
+		int cache[][] = new int [Arti.size()+1][w+1];
+		for(int i = 1 ; i<Arti.size()+1 ; i++)
 		{
 			for(int j = 1 ; j <= w ; j++)
 			{
-				if(Arti.get(i).getPeso() > j)
+				if(Arti.get(i-1).getPeso() > j)
 				{
 					cache[i][j] = cache[i-1][j];
 				}
 				else
 				{
-					if(cache[i-1][j] >= Arti.get(i).getPrecio() + cache[i-1][j-Arti.get(i).getPeso()])
+					if(cache[i-1][j] >= (Arti.get(i-1).getPrecio() + cache[i-1][j-Arti.get(i-1).getPeso()]))
+					{
 						cache[i][j] = cache[i-1][j];
-					else
-						cache[i][j] = Arti.get(i).getPrecio() + cache[i-1][j-Arti.get(i).getPeso()];
+					}
+					else 
+					{
+						cache[i][j] = Arti.get(i-1).getPrecio() + cache[i-1][j-Arti.get(i-1).getPeso()];
+					}
 				}
 			}
 			impresionMatriz(cache);
 		}
-		return cache[Arti.size()-1][w];
+		return cache[Arti.size()][w];
 	}
 	public static void impresionMatriz(int matriz[][])
 	{
@@ -38,5 +42,9 @@ public class Morral
 			}
 			System.out.println();
 		}
+	}
+	public static void mejorTulaRecursiva()
+	{
+		
 	}
 }
