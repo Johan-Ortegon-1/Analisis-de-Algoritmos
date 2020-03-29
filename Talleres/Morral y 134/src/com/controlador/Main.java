@@ -48,6 +48,36 @@ private static List<Articulo> articulosTomarPrestado = new ArrayList<Articulo>()
 		System.out.println("Resultado 134: " + resultado134);
 		resultado134 = E134.forma134recursion(10);
 		System.out.println("Resultado recursivo 134: " + resultado134);
+		
+		/*Problema 4.6 Boh*/
+		ArrayList<Integer> arregloP = new ArrayList<Integer>();
+		
+		/*arregloP.add(4);
+		arregloP.add(2);
+		arregloP.add(10);
+		arregloP.add(25);
+		arregloP.add(3);
+		arregloP.add(5);
+		arregloP.add(1);*/
+		
+		/*arregloP.add(1);
+		arregloP.add(1);
+		arregloP.add(1);
+		arregloP.add(1);
+		arregloP.add(1);
+		arregloP.add(1);*/
+		
+		/*arregloP.add(7);
+		arregloP.add(8);
+		arregloP.add(1);
+		arregloP.add(15);
+		arregloP.add(1);*/
+	
+		
+		if(EjerciciosBoh.posibleDividirArreglo(arregloP) == false)
+		{
+			System.out.println("No es posible dividir el arreglo en conjuntos equivalentes");
+		}
 	}
 
 }
